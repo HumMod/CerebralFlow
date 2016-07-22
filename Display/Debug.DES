@@ -1,0 +1,48 @@
+<panel>
+	<name> Debug </name>
+	<structurename> CerebralC </structurename>
+
+	<showvalue>
+		<row> 1 </row> <col> 1.0 </col>
+		<name> invcbvl </name>
+		<format><decimal> 1 </decimal></format>
+		<label> invcbvl </label>
+	</showvalue>
+	<showvalue>
+		<row> 2 </row> <col> 1.0 </col>
+		<name> PCVRL </name>
+		<format><decimal> 1 </decimal></format>
+		<label> PCVRL </label>
+	</showvalue>
+	<showvalue>
+		<row> 3 </row> <col> 1.0 </col>
+		<name> gbvl2 </name>
+		<format><decimal> 1 </decimal></format>
+		<label> gbvl2 </label>
+	</showvalue>
+	<showvalue>
+		<row> 4 </row> <col> 1.0 </col>
+		<name> PIL </name>
+		<format><decimal> 1 </decimal></format>
+		<label> PIL </label>
+	</showvalue>
+	<showvalue>
+		<row> 5 </row> <col> 1.0 </col>
+		<name> vo </name>
+		<format><decimal> 1 </decimal></format>
+		<label> vo </label>
+	</showvalue>
+	<showvalue>
+		<row> 6 </row> <col> 1.0 </col>
+		<name> gbvl2close </name>
+		<format><decimal> 1 </decimal></format>
+		<label> gbvl2close </label>
+	</showvalue>
+	<showvalue>
+		<row> 7 </row> <col> 1.0 </col>
+		<name> f1vvbvl </name>
+		<format><decimal> 1 </decimal></format>
+		<label> f1vvbvl </label>
+	</showvalue>
+
+</panel>

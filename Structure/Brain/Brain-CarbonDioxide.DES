@@ -1,0 +1,66 @@
+<structure><name> Brain-CarbonDioxide </name>
+<variables>
+	<var><name> zero </name><val> 0 </val></var>
+	<var><name> InitialBrainpCO2 </name><val> 43 </val></var>
+	<var><name> InitialBrainPhSID </name><val> 0.034 </val></var>
+	<var><name> InitialBrainHCO3 </name></var>
+	<var><name> InitialBrainLiquidMass </name><val> 1035.63 </val></var>
+
+	<var><name> BrainpCO2 </name></var>
+	<var><name> Brain[CO2] </name></var>
+	<var><name> Brain[HCO3] </name></var>
+	<var><name> BrainHCO3 </name></var>
+
+	<var><name> ExtracellularpCO2 </name></var>
+
+	<var><name> BloodCO2 </name></var>
+	<var><name> BloodpCO2 </name></var>
+
+	<var><name> K_CO2 </name></var>
+	<parm><name> p50 </name><val> 32.0 </val></parm>
+	<parm><name> k </name><val> 0.760 </val></parm>
+
+</variables>
+<equations>
+	<!--<diffeq>
+		<name> ExtracellularCO2 </name>
+		<integralname> ExtracellularCO2 </integralname>
+		<initialval> </initialval>
+		<errorlim> 0.01 </errorlim>
+		<dervname> dExtracellularCO2/dt </dervname>
+	</diffeq>
+	<diffeq>
+		<name> BrainCO2 </name>
+		<integralname> BrainCO2 </integralname>
+		<initialval> </initialval>
+		<errorlim> 0.01 </errorlim>
+		<dervname> dBrainCO2/dt </dervname>
+	</diffeq>-->
+</equations>
+<definitions>
+	<block><name> Init </name>
+		<def><name> K_CO2 </name><val> k * InitialBrainPhSID </val></def>
+
+		<copy><from> p50 </from><to> CO2_pCO2_To_[HCO3].p50 </to></copy>
+		<copy><from> K_CO2 </from><to> CO2_pCO2_To_[HCO3].K </to></copy>
+		<copy><from> InitialBrainpCO2 </from><to> CO2_pCO2_To_[HCO3].pCO2 </to></copy>
+		<call> CO2_pCO2_To_[HCO3].Calc </call>
+		<copy><from> CO2_pCO2_To_[HCO3].[HCO3] </from><to> Brain[HCO3] </to></copy>
+
+		<def><name> InitialBrainHCO3 </name><val> Brain[HCO3] * InitialBrainLiquidMass </val></def>
+
+		<def><name> BloodpCO2 </name><val> Other.CO2BloodpCO2 </val></def>
+	</block>
+	<block><name> Dervs </name>
+		<def><name> Brain[HCO3] </name><val> InitialBrainHCO3 / Brain-Size.LiquidMass </val></def>
+
+		<def><name> K_CO2 </name><val> k * Brain-Ph.[SID] </val></def>
+
+		<copy><from> Brain[HCO3] </from><to> CO2_[HCO3]_To_pCO2.[HCO3] </to></copy>
+		<copy><from> p50 </from><to> CO2_[HCO3]_To_pCO2.p50 </to></copy>
+		<copy><from> K_CO2 </from><to> CO2_[HCO3]_To_pCO2.K </to></copy>
+		<call> CO2_[HCO3]_To_pCO2.Calc </call>
+		<copy><from> CO2_[HCO3]_To_pCO2.pCO2 </from><to> BrainpCO2 </to></copy>
+	</block>
+</definitions>
+</structure>

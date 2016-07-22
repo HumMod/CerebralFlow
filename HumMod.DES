@@ -1,0 +1,27 @@
+Model A
+
+Created: 2016-06-02
+Author: Omair Arain
+
+Model A of Cerebral Blood Flow 
+from Piechnik 2001.
+
+<?xml version = '1.0' ?>
+
+<model>
+	<title><basic> Model A </basic></title>
+
+<?include Structure\Structure.DES ?>
+
+<math>
+	<context> Structure.Init </context>
+	<parms> Structure.Parms </parms>
+	<dervs> Structure.Dervs </dervs>
+</math>
+
+<?include Control/Control.DES ?>
+<?include Display/Display.DES ?>
+
+</model>
+
+

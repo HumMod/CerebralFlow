@@ -1,0 +1,1397 @@
+<structure>
+  <name> CerebralC </name>
+
+  <variables>
+    <var><name> check1 </name></var>
+    <var><name> check2 </name></var>
+EXTERNAL INPUTS
+    <var>
+      <name> ABP </name>
+      <val> 100 </val>
+    </var>
+    <var>
+      <name> zero </name>
+      <val> 0 </val>
+    </var>
+    <var>
+      <name> fifteen </name>
+      <val> 15 </val>
+    </var>
+    <var>
+      <name> fifty </name>
+      <val> 50 </val>
+    </var>
+    <var>
+      <name> fourfifteen </name>
+      <val> 415 </val>
+    </var>
+    <var>
+      <name> conductancefactorcvr </name>
+      <val> 1 </val>
+    </var>
+    <var>
+      <name> conductancefactorbvl </name>
+      <val> 1 </val>
+    </var>
+    <var>
+      <name> compliancefactor </name>
+      <val> 1 </val>
+    </var>
+ICAs
+    <var>
+      <name> L-ICA-Resistance </name>
+      <val> 0.08 </val>0.01
+    </var>
+    <var>
+      <name> R-ICA-Resistance </name>
+      <val> 0.08 </val>0.01
+    </var>
+    <var>
+      <name> L-ICA-Compliance </name>
+      <val> 0.0175 </val>0.01
+    </var>
+    <var>
+      <name> R-ICA-Compliance </name>
+      <val> 0.0175 </val>0.01
+    </var>
+    <var>
+      <name> invcical </name>
+    </var>
+    <var>
+      <name> invcicar </name>
+    </var>
+    <var>
+      <name> PICAL </name>
+    </var>
+    <var>
+      <name> PICAR </name>
+    </var>
+    <var>
+      <name> gical2 </name>
+    </var>
+    <var>
+      <name> gicar2 </name>
+    </var>
+    <var>
+      <name> qical </name>
+    </var>
+    <var>
+      <name> qicar </name>
+    </var>
+
+  MCAs
+    <var>
+      <name> L-MCA-Resistance </name>
+      <val> 0.08 </val>0.01
+    </var>
+    <var>
+      <name> R-MCA-Resistance </name>
+      <val> 0.08 </val>0.01
+    </var>
+    <var>
+      <name> L-MCA-Compliance </name>
+      <val> 0.0175 </val>0.02
+    </var>
+    <var>
+      <name> R-MCA-Compliance </name>
+      <val> 0.0175 </val>0.02
+    </var>
+    <var>
+      <name> invcmcal </name>
+    </var>
+    <var>
+      <name> invcmcar </name>
+    </var>
+    <var>
+      <name> PMCAL </name>
+    </var>
+    <var>
+      <name> PMCAR </name>
+    </var>
+    <var>
+      <name> vmcal </name>
+    </var>
+    <var>
+      <name> vmcar </name>
+    </var>
+    <var>
+      <name> gmcal2 </name>
+    </var>
+    <var>
+      <name> gmcar2 </name>
+    </var>
+    <var>
+      <name> qmcal </name>
+    </var>
+    <var>
+      <name> qmcar </name>
+    </var>
+
+  VRBs
+    <var>
+      <name> invccvrl </name>
+    </var>
+    <var>
+      <name> invccvrr </name>
+    </var>
+    <var>
+      <name> vcvrl </name>
+    </var>
+    <var>
+      <name> vcvrr </name>
+    </var>
+    <var>
+      <name> PCVRL </name>
+    </var>
+    <var>
+      <name> PCVRR </name>
+    </var>
+    <var>
+      <name> gcvrl2close </name>
+    </var>
+    <var>
+      <name> gcvrr2close </name>
+    </var>
+    <var>
+      <name> gcvrl2 </name>
+    </var>
+    <var>
+      <name> gcvrr2 </name>
+    </var>
+    <var>
+      <name> qcvrl </name>
+    </var>
+    <var>
+      <name> qcvrr </name>
+    </var>
+
+  IVOs
+    <var>
+      <name> L-IVO-ResistanceCoeff </name>
+      <val> 0.2 </val>0.2
+    </var>
+    <var>
+      <name> R-IVO-ResistanceCoeff </name>
+      <val> 0.2 </val>
+    </var>
+    <var>
+      <name> L-IVO-Compliance </name>
+      <val> 0.5 </val>0.5
+    </var>
+    <var>
+      <name> R-IVO-Compliance </name>
+      <val> 0.5 </val>0.5
+    </var>
+    <var>
+      <name> invcbvl </name>
+    </var>
+    <var>
+      <name> invcbvr </name>
+    </var>
+    <var>
+      <name> vbvl </name>
+    </var>
+    <var>
+      <name> vbvr </name>
+    </var>
+    <var>
+      <name> gbvl2 </name>
+    </var>
+    <var>
+      <name> gbvr2 </name>
+    </var>
+    <var>
+      <name> qbvl </name>
+    </var>
+    <var>
+      <name> qbvr </name>
+    </var>
+
+  CSF
+    <var>
+      <name> invcic </name>
+    </var>
+    <var>
+      <name> PIL </name>
+    </var>
+    <var>
+      <name> PIR </name>
+    </var>
+    <var>
+      <name> gsl </name>
+    </var>
+    <var>
+      <name> gsr </name>
+    </var>
+    <var>
+      <name> ific </name>
+      <val> 0 </val>
+    </var>
+    <var>
+      <name> ifiv </name>
+      <val> 0 </val>
+    </var>
+    <var>
+      <name> PIV </name>
+    </var>
+    <var>
+      <name> gac </name>
+      <val> 1 </val>
+    </var>
+    <var>
+      <name> xmcal </name>
+    </var>
+    <var>
+      <name> xmcar </name>
+    </var>
+    <var>
+      <name> ifl </name>
+      <val> 0.127 </val>
+    </var>
+    <var>
+      <name> ifr </name>
+      <val> 0.127 </val>
+    </var>
+    <var>
+      <name> irlcl </name>
+      <val> 0 </val>
+    </var>
+    <var>
+      <name> irlcr </name>
+      <val> 0 </val>
+    </var>
+  EVO
+    <var>
+      <name> EVO-Resistance </name>
+      <val> 0.01 </val>0.01
+    </var>
+    <var>
+      <name> EVO-Compliance </name>
+      <val> 1 </val>1
+    </var>
+    <var>
+      <name> invco </name>
+    </var>
+    <var>
+      <name> grl </name>
+    </var>
+    <var>
+      <name> grr </name>
+    </var>
+    <var>
+      <name> gbvl2close </name>
+    </var>
+    <var>
+      <name> gbvr2close </name>
+    </var>
+    <var>
+      <name> go </name>
+    </var>
+    <var>
+      <name> qo </name>
+    </var>
+  NODES
+    <var>
+      <name> gacoa </name>
+    </var>
+    <var>
+      <name> gans </name>
+    </var>
+    <var>
+      <name> gcvrbvl </name>
+    </var>
+    <var>
+      <name> gcvrbvr </name>
+    </var>
+    <var>
+      <name> gcvrl </name>
+    </var>
+    <var>
+      <name> gcvrr </name>
+    </var>
+    <var>
+      <name> gbvl </name>
+    </var>
+    <var>
+      <name> gbvr </name>
+    </var>
+    <var>
+      <name> gaccvrl </name>
+    </var>
+    <var>
+      <name> gaccvrr </name>
+    </var>
+  CALCULATIONS
+  Cerebrovascular Resistance
+    <var>
+      <name> CPP </name>
+    </var>
+    <var>
+      <name> CPPn </name>
+    </var>
+    <var>
+      <name> CPPclose </name>
+      <val> 70.0 </val>70
+    </var>
+    <var>
+      <name> CPPmax </name>
+      <val> 120 </val>
+    </var>
+    <var>
+      <name> CPPmin </name>
+      <val> 40 </val>
+    </var>
+    <var>
+      <name> CVRmax </name>
+      <val> 0.35 </val>0.35
+    </var>
+    <var>
+      <name> CVRmin </name>
+      <val> 0.1 </val>0.1
+    </var>
+    <var>
+      <name> Aclose </name>
+      <val> 1 </val>
+    </var>
+    <var>
+      <name> CPPoffset </name>
+    </var>
+    <var>
+      <name> CVR </name>
+    </var>
+    <var>
+      <name> CVRclose </name>
+    </var>
+    <parm>
+      <name> CVRreal </name>
+      <val> 0.05 </val>0.17
+    </parm>
+  Cerebrovascular Compliance
+    <var>
+      <name> Ca </name>
+    </var>
+    <var>
+      <name> CAspan </name>
+      <val> 0.02 </val>0.1
+    </var>
+    <var>
+      <name> Coffset </name>
+    </var>
+  Venous Outflow
+    <var>
+      <name> Rbvl </name>
+    </var>
+    <var>
+      <name> Rbvr </name>
+    </var>
+    <var>
+      <name> Rbvlclose </name>
+    </var>
+    <var>
+      <name> Rbvrclose </name>
+    </var>
+    <var>
+      <name> Rbv0l </name>
+    </var>
+    <var>
+      <name> Rbv0r </name>
+    </var>
+    <var>
+      <name> Pvl </name>
+    </var>
+    <var>
+      <name> Pvr </name>
+    </var>
+    <var>
+      <name> ICPl </name>
+    </var>
+    <var>
+      <name> ICPr </name>
+    </var>
+    <var>
+      <name> CBF </name>
+    </var>
+  CSF Resistance
+    <var>
+      <name> Psagsin </name>
+    </var>
+    <var>
+      <name> Rcsf </name>
+      <val> 9 </val>
+    </var>
+  CSF Compliance
+    <var>
+      <name> Ci </name>
+    </var>
+    <var>
+      <name> Ci0 </name>
+      <val> 5 </val>
+    </var>
+    <var>
+      <name> ICPi </name>
+    </var>
+    <var>
+      <name> P0 </name>
+      <val> 0 </val>
+    </var>
+    <var>
+      <name> Pz </name>
+      <val> 5 </val>
+    </var>
+
+  NODE VARS
+    <var>
+      <name> pical </name>
+    </var>
+    <var>
+      <name> picar </name>
+    </var>
+    <var>
+      <name> pmcal </name>
+    </var>
+    <var>
+      <name> pmcar </name>
+    </var>
+    <var>
+      <name> pcvrl </name>
+    </var>
+    <var>
+      <name> pcvrr </name>
+    </var>
+    <var>
+      <name> pil </name>
+    </var>
+    <var>
+      <name> pir </name>
+    </var>
+    <var>
+      <name> piv </name>
+    </var>
+
+CONDUCTANCE
+    <var>
+      <name> PCO2OnTension </name>
+    </var>
+    <var>
+      <name> PO2OnTension </name>
+    </var>
+    <var>
+      <name> TotalTension </name>
+    </var>
+    <var>
+      <name> TensionEffect </name>
+      <val> 1 </val>
+    </var>
+FLOW
+  <var>
+      <name> dvvcvrl/dt </name>
+  </var>
+  <var>
+      <name> dvvcvrr/dt </name>
+  </var>
+  <var>
+      <name> dvvbvl/dt </name>
+  </var>
+  <var>
+      <name> dvvbvr/dt </name>
+  </var>
+  <var>
+    <name> PlasmaFlow </name>
+  </var>
+  <parm>
+    <name> Multiplier </name>
+    <val> 1 </val>
+  </parm>
+  <var>
+    <name> CVR_Flow_mL_/_100g_/_min </name>
+  </var>
+
+TEST STUFF
+    <var>
+      <name> dvic/dt </name>
+    </var>
+  </variables>
+
+
+
+  <equations>
+  BACKWARDEULERS
+  ICAs
+    <backwardeuler>
+      <name> vical </name>
+      <integralname> vical </integralname>
+      <f1name> f1vical </f1name>
+      <f2name> f2vical </f2name>
+      <errorlim> 1 </errorlim>
+    </backwardeuler>
+    <backwardeuler>
+      <name> vicar </name>
+      <integralname> vicar </integralname>
+      <f1name> f1vicar </f1name>
+      <f2name> f2vicar </f2name>
+      <errorlim> 1 </errorlim>
+    </backwardeuler>
+  VRBs
+    <backwardeuler>
+      <name> vvcvrl </name>
+      <integralname> vvcvrl </integralname>
+      <f1name> f1vvcvrl </f1name>
+      <f2name> f2vvcvrl </f2name>
+      <errorlim> 0.05 </errorlim>
+    </backwardeuler>
+    <backwardeuler>
+      <name> vvcvrr </name>
+      <integralname> vvcvrr </integralname>
+      <f1name> f1vvcvrr </f1name>
+      <f2name> f2vvcvrr </f2name>
+      <errorlim> 0.05 </errorlim>
+    </backwardeuler>
+  IVOs
+    <backwardeuler>
+      <name> vvbvl </name>
+      <integralname> vvbvl </integralname>
+      <f1name> f1vvbvl </f1name>
+      <f2name> f2vvbvl </f2name>
+      <errorlim> 0.05 </errorlim>
+    </backwardeuler>
+    <backwardeuler>
+      <name> vvbvr </name>
+      <integralname> vvbvr </integralname>
+      <f1name> f1vvbvr </f1name>
+      <f2name> f2vvbvr </f2name>
+      <errorlim> 0.05 </errorlim>
+    </backwardeuler>
+  CSF
+    <backwardeuler>
+      <name> vic </name>
+      <integralname> vic </integralname>
+      <f1name> f1vic </f1name>
+      <f2name> f2vic </f2name>
+      <errorlim> 0.05 </errorlim>
+    </backwardeuler>
+  EVO
+    <backwardeuler>
+      <name> vo </name>
+      <integralname> vo </integralname>
+      <f1name> f1vo </f1name>
+      <f2name> f2vo </f2name>
+      <errorlim> 0.05 </errorlim>
+    </backwardeuler>
+  NODES
+
+  DIFFEQS
+    <diffeq>
+      <name> vvmcal </name>
+      <integralname> vvmcal </integralname>
+      <initialval> 84 </initialval>
+      <dervname> dvvmcal/dt </dervname>
+      <errorlim> 1 </errorlim>
+    </diffeq>
+    <diffeq>
+      <name> vvmcar </name>
+      <integralname> vvmcar </integralname>
+      <initialval> 84 </initialval>
+      <dervname> dvvmcar/dt </dervname>
+      <errorlim> 1 </errorlim>
+    </diffeq>
+  CALCULATIONS
+    <diffeq>
+      <name> CPPm </name>
+      <integralname> CPPm </integralname>
+      <initialval> 89 </initialval>
+      <dervname> dCPPm/dt </dervname>
+      <errorlim> 0.05 </errorlim>
+    </diffeq>
+  
+
+  PRESSURE
+    <diffeq>
+      <name> uumcal </name>
+      <integralname> uumcal </integralname>
+      <initialval> 15 </initialval>
+      <dervname> dumcal/dt </dervname>
+      <errorlim> 0.005 </errorlim>
+    </diffeq>
+    <diffeq>
+      <name> uumcar </name>
+      <integralname> uumcar </integralname>
+      <initialval> 15 </initialval>
+      <dervname> dumcar/dt </dervname>
+      <errorlim> 0.005 </errorlim>
+    </diffeq>    
+    <diffeq>
+      <name> uucvrl </name>
+      <integralname> uucvrl </integralname>
+      <initialval> 50 </initialval>
+      <dervname> ducvrl/dt </dervname>
+      <errorlim> 0.005 </errorlim>
+    </diffeq>
+    <diffeq>
+      <name> uucvrr </name>
+      <integralname> uucvrr </integralname>
+      <initialval> 50 </initialval>
+      <dervname> ducvrr/dt </dervname>
+      <errorlim> 0.005 </errorlim>
+    </diffeq> 
+    <diffeq>
+      <name> uubvl </name>
+      <integralname> uubvl </integralname>
+      <initialval> 0 </initialval>
+      <dervname> dubvl/dt </dervname>
+      <errorlim> 0.005 </errorlim>
+    </diffeq>
+    <diffeq>
+      <name> uubvr </name>
+      <integralname> uubvr </integralname>
+      <initialval> 0 </initialval>
+      <dervname> dubvr/dt </dervname>
+      <errorlim> 0.005 </errorlim>
+    </diffeq> 
+
+  </equations>
+
+  <functions>
+
+  <curve>
+    <name> PO2OnTension </name>
+    <point><x> 46 </x><y> 0.0 </y><slope> 0 </slope></point>22,0,0
+    <point><x> 60 </x><y> 1.0 </y><slope> 0.02 </slope></point>36,1,.02
+    <point><x> 84 </x><y> 1.2 </y><slope> 0 </slope></point>60,1.2,0
+  </curve>
+
+  <curve>
+    <name> PCO2OnTension </name>
+    <point><x> 20 </x><y> 1.8 </y><slope> 0 </slope></point>
+    <point><x> 45 </x><y> 1.0 </y><slope> -0.05 </slope></point>
+    <point><x> 75 </x><y> 0.0 </y><slope> 0 </slope></point>
+  </curve>
+
+  <curve>
+    <name> TensionOnConductance </name>
+    <point><x> 0.0 </x><y> 2.2 </y><slope> 0 </slope></point>
+    <point><x> 1.0 </x><y> 1.0 </y><slope> -0.5 </slope></point>
+    <point><x> 2.0 </x><y> 0.6 </y><slope> 0 </slope></point>
+  </curve>
+
+  </functions>
+
+
+  <definitions>
+    <block><name> Init </name>
+    STATE VARIABLES
+    <def>
+      <name> vical </name>
+      <val> 76.3 </val>
+    </def>
+    <def>
+      <name> vicar </name>
+      <val> 76.3 </val>
+    </def>
+    <def>
+      <name> vvmcal </name>
+      <val> 62.4 </val>
+    </def>
+    <def>
+      <name> vvmcar </name>
+      <val> 62.4 </val>
+    </def>
+    <def>
+      <name> vvcvrl </name>
+      <val> 38.4 </val> 
+    </def>
+    <def>
+      <name> vvcvrr </name>
+      <val> 38.4 </val>
+    </def>
+    <def>
+      <name> vvbvr </name>
+      <val> 1.8 </val>
+    </def>
+    <def>
+      <name> vvbvl </name>
+      <val> 1.8 </val>
+    </def>
+    <def>
+      <name> vic </name>
+      <val> 7.2 </val>
+    </def>
+    <def>
+      <name> vo </name>
+      <val> 1.2 </val>
+    </def>
+    NODES
+    <def>
+      <name> PICAL </name>
+      <val> 73 </val>
+    </def>
+    <def>
+      <name> PICAR </name>
+      <val> 73 </val>
+    </def>
+    <def>
+      <name> PMCAL </name>
+      <val> 66.3 </val>
+    </def>
+    <def>
+      <name> PMCAR </name>
+      <val> 66.3 </val>
+    </def>
+    <def>
+      <name> PCVRL </name>
+      <val> 12.7 </val>
+    </def>
+    <def>
+      <name> PCVRR </name>
+      <val> 12.7 </val>
+    </def>
+    <def>
+      <name> PIL </name>
+      <val> 5.2 </val>
+    </def>
+    <def>
+      <name> PIR </name>
+      <val> 5.2 </val>
+    </def>
+    <def>
+      <name> PIV </name>
+      <val> 1.2 </val>
+    </def>
+  </block>
+
+  <block><name> Parms </name>
+    <def>
+      <name> invcical </name>
+      <val> 1 / L-ICA-Compliance </val>
+    </def>
+    <def>
+      <name> invcicar </name>
+      <val> 1 / R-ICA-Compliance </val>
+    </def>
+    <def>
+      <name> gical2 </name>
+      <val> ( 2 / L-ICA-Resistance ) </val>
+    </def>
+    <def>
+      <name> gicar2 </name>
+      <val> ( 2 / R-ICA-Resistance ) </val>
+    </def>
+    <def>
+      <name> gacoa </name>
+      <val> ( 1 / 0.02 ) </val>
+    </def>
+
+    <def>
+      <name> invcmcal </name>
+      <val> 1 / L-MCA-Compliance </val>
+    </def>
+    <def>
+      <name> invcmcar </name>
+      <val> 1 / R-MCA-Compliance </val>
+    </def>
+    <def>
+      <name> gmcal2 </name>
+      <val> ( 2 / L-MCA-Resistance ) </val>
+    </def>
+    <def>
+      <name> gmcar2 </name>
+      <val> ( 2 / R-MCA-Resistance ) </val>
+    </def>
+
+    <def>
+      <name> gans </name>
+      <val> 1 / 0.01 </val>
+    </def>
+
+    <def>
+      <name> invcbvl </name>
+      <val> 1 / L-IVO-Compliance </val>
+    </def>
+    <def>
+      <name> invcbvr </name>
+      <val> 1 / R-IVO-Compliance </val>
+    </def>
+
+    <def>
+      <name> gsl </name>
+      <val> 0.5 </val>
+    </def>
+    <def>
+      <name> gsr </name>
+      <val> 0.5 </val>
+    </def>
+    
+    <def>
+      <name> invco </name>
+      <val> 1 / EVO-Compliance </val>
+    </def>
+    <def>
+      <name> grl </name>
+      <val> ( 1 / 9 ) </val>
+    </def>
+    <def>
+      <name> grr </name>
+      <val> ( 1 / 9 ) </val>
+    </def>
+  </block>
+
+  <block><name> Dervs </name>
+
+    EXTERNAL INPUTS
+    <def>
+      <name> ABP </name>
+      <val> Windkessel.AP </val>
+    </def>
+
+  STATE VARIABLES
+    <def>
+      <name> vmcal </name>
+      <val> vvmcal + vic </val>
+    </def>
+    <def>
+      <name> vmcar </name>
+      <val> vvmcar + vic </val>
+    </def>
+    <def>
+      <name> vcvrl </name>
+      <val> vvcvrl + PIV </val>
+    </def>
+    <def>
+      <name> vcvrr </name>
+      <val> vvcvrr + PIV </val>
+    </def>
+    <def>
+      <name> vbvl </name>
+      <val> vvbvl + PIL </val>
+    </def>
+    <def>
+      <name> vbvr </name>
+      <val> vvbvr + PIR </val>
+    </def>
+  CALCULATIONS
+    <def><name> gmcal2 </name><val> ( 2 / L-MCA-Resistance ) * TensionEffect </val></def>
+    <def><name> gmcar2 </name><val> ( 2 / R-MCA-Resistance ) * TensionEffect </val></def>
+    <def>
+      <name> CPP </name>
+      <val> ABP - PIV </val>
+    </def>
+    <def>
+      <name> dCPPm/dt </name>
+      <val> 0.384 * ( CPP - CPPm ) </val>
+    </def>
+    <def>
+      <name> CPPn </name>
+      <val> 1.5 * ( CPPmax - CPPmin )  </val>
+    </def>
+    <def>
+      <name> CPPoffset </name>
+      <val> CPPn - ( 0.5 * ( CPPmax - CPPmin ) ) </val>
+    </def>
+    <if>
+    <test> CPP GE CPPclose </test>
+    <true>
+    <def>
+      <name> CVRclose </name>
+      <val> CVRmax - ( ( CVRmax - CVRmin ) / ( 1 + ( ( CPPm - CPPoffset ) / CPPn ) ) ) </val>
+    </def>
+    </true>
+    <false>
+    <def>
+      <name> CVRclose </name>
+      <val> ( CVRmax - ( ( CVRmax - CVRmin ) / ( 1 + ( ( CPPm - CPPoffset ) / CPPn ) ) ) ) - ( Aclose * ( CPP - CPPclose ) ) </val>
+    </def>
+    </false>
+    </if>
+    <def>
+      <name> CVR </name>
+      <val> CVRmax - ( ( CVRmax - CVRmin ) / ( 1 + ( ( CPPm - CPPoffset ) / CPPn ) ) ) </val>
+    </def>
+
+    <def>
+      <name> Ca </name>
+      <val> ( CAspan / ( CVR / CVRmin ) ) / compliancefactor </val>
+    </def>
+
+    <def>
+      <name> Rbv0l </name>
+      <val> L-IVO-ResistanceCoeff </val>
+    </def>
+    <def>
+      <name> Rbv0r </name>
+      <val> R-IVO-ResistanceCoeff </val>
+    </def>
+    <def>
+      <name> ICPl </name>
+      <val> PIV </val>
+    </def>
+    <def>
+      <name> ICPr </name>
+      <val> PIV </val>
+    </def>
+    <def>
+      <name> Psagsin </name>
+      <val> vo </val>
+    </def>
+
+    <def>
+      <name> Pvl </name>
+      <val> PCVRL </val>
+    </def>
+    <def>
+      <name> Pvr </name>
+      <val> PCVRR </val>
+    </def>
+    <if>
+    <test> Pvl GT ICPl </test>
+    <true>
+    <def>
+      <name> Rbvlclose </name>
+      <val> Rbv0l / ( Pvl - ICPl ) </val>
+    </def>
+    </true>
+    <false>
+    <def>
+      <name> Rbvlclose </name>
+      <val> 10000 </val>
+    </def>
+    </false>
+    </if>
+    <if>
+    <test> Pvr GT ICPr </test>
+    <true>
+    <def>
+      <name> Rbvrclose </name>
+      <val> Rbv0r / ( Pvr - ICPr ) </val>
+    </def>
+    </true>
+    <false>
+    <def>
+      <name> Rbvrclose </name>
+      <val> 10000 </val>
+    </def>
+    </false>
+    </if>
+    <def>
+      <name> Rbvl </name>
+      <val> Rbv0l / ( Pvl - ICPl ) </val>
+    </def>
+    <def>
+      <name> Rbvr </name>
+      <val> Rbv0r / ( Pvr - ICPr ) </val>
+    </def>
+
+    <if>
+    <test> ICPl GT Psagsin </test>
+    <true> 
+    <def>
+      <name> gsl </name>
+      <val> ( ICPl - Psagsin ) / Rcsf </val>
+    </def>
+    </true>
+    <false>
+    <def>
+      <name> gsl </name>
+      <val> 0 </val>
+    </def>
+    </false>
+    </if>
+    <if>
+    <test> ICPr GT Psagsin </test>
+    <true> 
+    <def>
+      <name> gsr </name>
+      <val> ( ICPr - Psagsin ) / Rcsf </val>
+    </def>
+    </true>
+    <false>
+    <def>
+      <name> gsr </name>
+      <val> 0 </val>
+    </def>
+    </false>
+    </if>
+
+    <def>
+      <name> ICPi </name>
+      <val> vic </val>
+    </def>
+    <if>
+    <test> ICPi GT Pz </test>
+    <true>
+    <def>
+      <name> Ci </name>
+      <val> Ci0 / ( ICPi - P0 ) </val>
+    </def>
+    </true>
+    <false>
+    <def>
+      <name> Ci </name>
+      <val> Ci0 / ( Pz - P0 ) </val>
+    </def>
+    </false>
+    </if>
+
+    <def>
+      <name> go </name>
+      <val> ( ( ( ( Pvl + Pvr ) / 2 ) - ( ( ICPl + ICPr ) / 2 ) ) * 100 ) </val>
+    </def>
+    
+    <def>
+      <name> xmcal </name>
+      <val> 0.5 * gmcal2 * ( PICAL + PMCAL - ( 2 * vmcal ) ) </val>
+    </def>
+    <def>
+      <name> xmcar </name>
+      <val> 0.5 * gmcar2 * ( PICAR + PMCAR - ( 2 * vmcar ) ) </val>
+    </def>
+
+  CALCULATION OUTPUTS
+    <def>
+      <name> invccvrl </name>
+      <val> 1 / Ca </val>
+    </def>
+    <def>
+      <name> invccvrr </name>
+      <val> 1 / Ca </val>
+    </def>
+    <def>
+      <name> gcvrl2 </name>
+      <val> ( 2 / CVR ) * TensionEffect </val>
+    </def>
+    <def>
+      <name> gcvrr2 </name>
+      <val> ( 2 / CVR ) * TensionEffect </val>
+    </def>
+    <def>
+      <name> gcvrl2close </name>
+      <val> ( 2 / CVRclose ) * TensionEffect </val>
+    </def>
+    <def>
+      <name> gcvrr2close </name>
+      <val> ( 2 / CVRclose ) * TensionEffect </val>
+    </def>
+    <def>
+      <name> gcvrl </name>
+      <val> ( 1 / CVR ) * TensionEffect </val>
+    </def>
+    <def>
+      <name> gcvrr </name>
+      <val> ( 1 / CVR ) * TensionEffect </val>
+    </def>
+
+CVR REAL=============================
+    <def>
+      <name> gcvrl2 </name>
+      <val> ( 2 / CVRreal ) * TensionEffect </val>
+    </def>
+    <def>
+      <name> gcvrr2 </name>
+      <val> ( 2 / CVRreal ) * TensionEffect </val>
+    </def>
+    <def>
+      <name> gcvrl2close </name>
+      <val> ( 2 / CVRreal ) * TensionEffect </val>
+    </def>
+    <def>
+      <name> gcvrr2close </name>
+      <val> ( 2 / CVRreal ) * TensionEffect </val>
+    </def>
+    <def>
+      <name> gcvrl </name>
+      <val> ( 1 / CVRreal ) * TensionEffect </val>
+    </def>
+    <def>
+      <name> gcvrr </name>
+      <val> ( 1 / CVRreal ) * TensionEffect </val>
+    </def>
+=====================================
+
+    <def>
+      <name> gbvl2 </name>
+      <val> ( 2 / Rbvl ) </val>
+    </def>
+    <def>
+      <name> gbvr2 </name>
+      <val> ( 2 / Rbvr ) </val>
+    </def>
+    <def>
+      <name> gbvl2close </name>
+      <val> ( 2 / Rbvlclose ) </val>
+    </def>
+    <def>
+      <name> gbvr2close </name>
+      <val> ( 2 / Rbvrclose ) </val>
+    </def>
+    <def>
+      <name> gbvl </name>
+      <val> ( 1 / Rbvl ) </val>
+    </def>
+    <def>
+      <name> gbvr </name>
+      <val> ( 1 / Rbvr ) </val>
+    </def>
+    <def>
+      <name> gaccvrl </name>
+      <val> ( 1 / ( ( 1 / gac ) + ( 1 / gcvrl2 ) ) ) </val>
+    </def>
+    <def>
+      <name> gaccvrr </name>
+      <val> ( 1 / ( ( 1 / gac ) + ( 1 / gcvrr2 ) ) ) </val>
+    </def>
+
+    <def>
+      <name> invcic </name>
+      <val> 1 / Ci </val>
+    </def>
+
+    <def>
+      <name> gcvrbvl </name>
+      <val> 1 / ( ( 1 / gcvrl2 ) + ( 1 / gbvl2 ) ) </val>
+    </def>
+    <def>
+      <name> gcvrbvr </name>
+      <val> 1 / ( ( 1 / gcvrr2 ) + ( 1 / gbvr2 ) ) </val>
+    </def>
+
+
+  EQUATIONS: STATES
+  ICAs
+    <def>
+      <name> f1vical </name>
+      <val> invcical * gical2 * ( ABP + PICAL ) </val>
+    </def>
+    <def>
+      <name> f2vical </name>
+      <val> invcical * gical2 * 2 </val>
+    </def>
+    <def>
+      <name> f1vicar </name>
+      <val> invcicar * gicar2 * ( ABP + PICAR ) </val>
+    </def>
+    <def>
+      <name> f2vicar </name>
+      <val> invcicar * gicar2 * 2 </val>
+    </def>
+  MCAs
+    <def>
+      <name> dvvmcal/dt </name>
+      <val> invcmcal * xmcal </val>
+    </def>
+    <def>
+      <name> dvvmcar/dt </name>
+      <val> invcmcar * xmcar </val>
+    </def>
+  VRBs
+    <def>
+      <name> f1vvcvrl </name>
+      <val> ( invccvrl * PMCAL * gcvrl2close ) - ( invccvrl * gcvrl2close * PIV ) + ( invccvrl * PCVRL * gcvrl2 ) - ( invccvrl * PIV * gcvrl2 ) - ( invccvrl * ifl ) - ( invcic * irlcl ) </val>
+    </def>
+    <def>
+      <name> f2vvcvrl </name>
+      <val> ( invccvrl * gcvrl2close ) + ( invccvrl * gcvrl2 ) </val>
+    </def>
+    <def>
+      <name> dvvcvrl/dt </name>
+      <val> f1vvcvrl - ( f2vvcvrl * vvcvrl ) </val>
+    </def>
+    <def>
+      <name> f1vvcvrr </name>
+      <val> ( invccvrr * PMCAR * gcvrr2close ) - ( invccvrr * gcvrr2close * PIV ) + ( invccvrr * PCVRR * gcvrr2 ) - ( invccvrr * PIV * gcvrr2 ) - ( invccvrl * ifr ) - ( invcic * irlcr ) </val>
+    </def>
+    <def>
+      <name> f2vvcvrr </name>
+      <val> ( invccvrr * gcvrr2close ) + ( invccvrr * gcvrr2 ) </val>
+    </def>
+    <def>
+      <name> dvvcvrr/dt </name>
+      <val> f1vvcvrr - ( f2vvcvrr * vvcvrr ) </val>
+    </def>
+  IVOs
+    <def>
+      <name> f1vvbvl </name>
+      <val> ( invcbvl * PCVRL * gbvl2 ) - ( invcbvl * PIL * gbvl2 ) + ( invcbvl * vo * gbvl2close ) - ( invcbvl * PIL * gbvl2 ) </val>
+    </def>
+    <def>
+      <name> f2vvbvl </name>
+      <val> ( invcbvl * gbvl2 ) + ( invcbvl * gbvl2 ) </val> 
+    </def>
+    <def>
+      <name> dvvbvl/dt </name>
+      <val> f1vvbvl - ( f2vvbvl * vvbvl ) </val>
+    </def>
+    <def>
+      <name> f1vvbvr </name>
+      <val> ( invcbvr * PCVRR * gbvr2 ) - ( invcbvr * PIR * gbvr2 ) + ( invcbvr * vo * gbvr2close ) - ( invcbvr * PIR * gbvr2 ) </val>
+    </def>
+    <def>
+      <name> f2vvbvr </name>
+      <val> ( invcbvr * gbvr2 ) + ( invcbvr * gbvr2 ) </val>
+    </def>
+    <def>
+      <name> dvvbvr/dt </name>
+      <val> f1vvbvr - ( f2vvbvr * vvbvr ) </val>
+    </def>
+  CSF
+    <def>
+      <name> f1vic </name>
+      <val> ( invcic * PIL * gsl ) + ( invcic * ific ) + ( invcic * PIV * gac ) + ( invcic * PIR * gsr ) + ( invcic * xmcal ) + ( invcic * xmcar ) </val>
+    </def>
+    <def>
+      <name> f2vic </name>
+      <val> ( invcic * gsl ) + ( invcic * gac ) + ( invcic * gsr ) </val>
+    </def>
+    <def>
+      <name> dvic/dt </name>
+      <val> f1vic - ( f2vic * vic ) </val>
+    </def>
+  EVO
+    <def>
+      <name> f1vo </name>
+      <val> ( invco * PIL * grl ) + ( invco * vbvl * gbvl2close ) + ( invco * vbvr * gbvr2close ) + ( invco * PIR * grr ) + ( invco * 4 * go ) </val>
+    </def>
+    <def>
+      <name> f2vo </name>
+      <val> ( invco * grl ) + ( invco * gbvl2close ) + ( invco * gbvr2close ) + ( invco * grr ) + ( invco * go ) </val>
+    </def>
+
+
+  EQUATIONS: NODES
+    <def>
+      <name> pical </name>
+      <val> ( ( gical2 * ( vical ) ) + ( gmcal2 * ( vic + vvmcal ) ) + ( gacoa * ( PICAR ) ) ) / ( gical2 + gmcal2 + gacoa ) </val>
+    </def>
+    <def>
+      <name> picar </name>
+      <val> ( ( gicar2 * ( vicar ) ) + ( gmcar2 * ( vic + vvmcar ) ) + ( gacoa * ( PICAL ) ) ) / ( gicar2 + gmcar2 + gacoa ) </val>
+    </def>
+    <def>
+      <name> pmcal </name>
+      <val> ( ( gmcal2 * ( vic + vvmcal ) ) + ( gans * ( PMCAR ) ) + ( gcvrl2close * ( PIV + vvcvrl ) ) ) / ( gmcal2 + gans + gcvrl2close ) </val>
+    </def>
+    <def>
+      <name> pmcar </name>
+      <val> ( ( gmcar2 * ( vic + vvmcar ) ) + ( gans * ( PMCAL ) ) + ( gcvrr2close * ( PIV + vvcvrr ) ) ) / ( gmcar2 + gans + gcvrr2close ) </val>
+    </def>
+    <def>
+      <name> pcvrl </name>
+      <val> ( ( gcvrl2 * ( PIV + vvcvrl ) ) + ( gbvl2 * ( PIL + vvbvl ) ) ) / ( gcvrl2 + gbvl2 ) </val>
+    </def>
+    <def>
+      <name> pcvrr </name>
+      <val> ( ( gcvrr2 * ( PIV + vvcvrr ) ) + ( gbvr2 * ( PIR + vvbvr ) ) ) / ( gcvrr2 + gbvr2 ) </val>
+    </def>
+    <def>
+      <name> pil </name>
+      <val> ( ( gsl * ( vic ) ) + ( grl * ( vo ) ) + ( gcvrbvl * ( PIV + vvcvrl - vvbvl ) ) + ( gbvl2close * ( vo - vvbvl ) ) ) / ( gsl + grl + gcvrbvl + gbvl2close ) </val>
+    </def>
+    <def>
+      <name> pir </name>
+      <val> ( ( gsr * ( vic ) ) + ( grr * ( vo ) ) + ( gcvrbvr * ( PIV + vvcvrr - vvbvr ) ) + ( gbvr2close * ( vo - vvbvr ) ) ) / ( gsr + grr + gcvrbvr + gbvr2close ) </val>
+    </def>
+    <def>
+      <name> piv </name>
+      <val> ( ( ifiv + ( gcvrl2close * ( PMCAL - vvcvrl ) ) + ( gcvrbvl * ( PIL + vvbvl - vvcvrl ) ) + ( gac * ( vic ) ) + ( gcvrr2close * ( PMCAR - vvcvrr ) ) + ( gcvrbvr * ( PIR + vvbvr - vvcvrr ) ) ) / ( gcvrl2close + gcvrbvl + gac + gcvrr2close + gcvrbvr ) ) </val>+ 0.05
+    </def>
+
+  REDEFINITIONS
+    <def><name> PIL </name><val> pil </val></def>
+    <def><name> PIR </name><val> pir </val></def>
+    <def><name> PICAL </name><val> pical </val></def>
+    <def><name> PICAR </name><val> picar </val></def>
+    <def><name> PMCAL </name><val> pmcal </val></def>
+    <def><name> PMCAR </name><val> pmcar </val></def>
+    <def><name> PCVRL </name><val> pcvrl </val></def>
+    <def><name> PCVRR </name><val> pcvrr </val></def>
+    <def><name> PIV </name><val> piv </val></def>
+
+  FLOW
+  ICAs
+    <def>
+      <name> qical </name>
+      <val> ( vical - PICAL ) * gical2 </val>
+    </def>
+    <def>
+      <name> qicar </name>
+      <val> ( vicar - PICAR ) * gicar2 </val>
+    </def>
+  MCAs
+    <def>
+      <name> qmcal </name>
+      <val> ( vmcal - PMCAL ) * gmcal2 </val>
+    </def>
+    <def>
+      <name> qmcar </name>
+      <val> ( vmcar - PMCAR ) * gmcar2 </val>
+    </def>
+    <def>
+      <name> dumcal/dt </name>
+      <val> qical - qmcal - ( dvvmcal/dt * L-MCA-Compliance ) </val>
+    </def>
+    <def>
+      <name> dumcar/dt </name>
+      <val> qicar - qmcar - ( dvvmcar/dt * R-MCA-Compliance ) </val>
+    </def>
+  CVR
+    <def>
+      <name> qcvrl </name>
+      <val> ( vcvrl - PCVRL ) * gcvrl2 </val>
+    </def>
+    <def>
+      <name> qcvrr </name>
+      <val> ( vcvrr - PCVRR ) * gcvrr2 </val>
+    </def>
+    <def>
+      <name> ducvrl/dt </name>
+      <val> qmcal - qcvrl - ( dvvcvrl/dt * Ca ) </val>
+    </def>
+
+    <def>
+      <name> ducvrr/dt </name>
+      <val> qmcar - qcvrr - ( dvvcvrr/dt * Ca ) </val>
+    </def>
+  IVO
+    <def>
+      <name> qbvl </name>
+      <val> ( vbvl - vo ) * gbvl2 </val>
+    </def>
+    <def>
+      <name> qbvr </name>
+      <val> ( vbvr - vo ) * gbvl2 </val>
+    </def>
+    <def>
+      <name> dubvl/dt </name>
+      <val> qcvrl - qbvl - ( dvvbvl/dt * L-IVO-Compliance ) </val>
+    </def>
+    <def>
+      <name> dubvr/dt </name>
+      <val> qcvrr - qbvr - ( dvvbvr/dt * R-IVO-Compliance ) </val>
+    </def>
+  PLASMA
+    <def><name> PlasmaFlow </name><val> ( qcvrl + qcvrr ) * Other.BloodVolPVCrit </val></def>
+  TEST
+    <def><name> CVR_Flow_mL_/_100g_/_min </name><val> ( qcvrl + qcvrr ) / ( Brain-Size.Mass / 100 ) </val></def>
+
+  CONDUCTANCE
+    <def>
+      <name> PCO2OnTension </name>
+      <val> PCO2OnTension [ Other.CO2ArtyspCO2 ] </val>
+    </def>
+    <def>
+      <name> PO2OnTension </name>
+      <val> PO2OnTension [ Brain-Oxygen.BrainExtracellularpO2 ] </val>
+    </def>
+    <def>
+      <name> TotalTension </name>
+      <val> PO2OnTension * PCO2OnTension * Other.AnesthesiaVascularConductance </val>
+    </def> 
+    <def>
+      <name> TensionEffect </name>
+      <val> TensionOnConductance [ TotalTension ] </val>
+    </def>
+    <def>
+      <name> gac </name>
+      <val> TensionEffect </val>
+    </def>
+
+    </block>
+  </definitions>
+</structure>

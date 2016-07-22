@@ -1,0 +1,32 @@
+<?path Display\Tree\ ?>
+
+<tree>
+
+<leaf>
+  <name> Cerebral Model C </name>
+  <label> Cerebral </label>
+  <parent> MAINMENU </parent>
+</leaf>
+
+<leaf>
+  <name> Windkessel </name>
+  <label> Windkessel </label>
+  <parent> MAINMENU </parent>
+</leaf>
+
+<leaf>
+  <name> Brainold </name>
+  <label> Brainold </label>
+  <parent> MAINMENU </parent>
+</leaf>
+
+<leaf>
+  <name> Debug </name>
+  <label> Debug </label>
+  <parent> MAINMENU </parent>
+</leaf>
+
+<?include Brain.DES ?>
+
+
+</tree>

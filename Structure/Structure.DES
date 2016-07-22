@@ -1,0 +1,56 @@
+<?path Structure\ ?>
+<?include CerebralC.DES ?>
+<?include Windkessel.DES ?>
+<?include Brain.DES ?>
+<?include Other.DES ?>
+
+<structure><name> Structure </name>
+<definitions>
+
+<block><name> Init </name>
+  <!--<call> Brain-Flow.Init </call>-->
+  <call> Brain-Oxygen.Init </call>
+  <call> Brain-CO2.Init </call>
+  <call> CerebralC.Init </call>
+  <call> Brain-CarbonDioxide.Init </call>
+</block>
+
+<block><name> Parms </name>
+  <call> Brain-Size.ScaleH2O </call>
+  <call> Brain-Metabolism.ScaleCals </call>
+  <call> Brain-Vasculature.Parms </call>
+  <call> Brain-Oxygen.Parms </call>
+  <call> CerebralC.Parms </call>
+</block>
+
+
+<block><name> Dervs </name>
+  <call> Brain-Size.Calc </call>
+  <call> Windkessel.Dervs </call>
+  <call> CerebralC.Dervs </call>
+  <call> Other.Dervs </call>
+  <!--<call> Brain-Flow.Calc </call>-->
+  <call> Brain-Fuel.Dervs </call>
+  <call> Brain-Function.Calc </call>
+  <call> Brain-Ph.CalcSID </call>
+  <call> Brain-Ph.CalcPh </call>
+  <call> Brain-Pressure.Calc </call>
+  <call> Brain-Structure.Calc </call>
+  <call> GlasgowComaScale.Calc </call>
+  <call> Seizure.Calc </call>
+  <call> Brain-CO2.CalcConc </call>
+  <call> Brain-CO2.CalcDervs </call>
+  <call> Brain-CO2.MapperBlock </call>
+  <call> Brain-Lactate.CalcConc </call>
+  <call> Brain-Lactate.CalcDervs </call>
+  <call> Brain-Metabolism.CalcCals </call>
+  <call> Brain-Metabolism.SplitCals </call>
+  <call> Brain-Vasculature.Calc </call>
+  <call> BrainInsult.Calc </call>
+  <call> Brain-Fuel.O2Use </call>
+  <call> Brain-Oxygen.Dervs </call>
+  <call> Brain-CarbonDioxide.Dervs </call>
+</block>
+
+</definitions>
+</structure>

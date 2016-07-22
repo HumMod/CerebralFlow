@@ -1,0 +1,87 @@
+HumMod / Brain-Ph
+
+Created : 31-Mar-05
+Revised : 2012-07-16
+Author : Tom Coleman
+Copyright : 2006-2012
+By : University Of Mississippi Medical Center
+
+<structure><name> Brain-Ph </name>
+
+<variables>
+
+<var><name> Ph </name></var>
+<var><name> [SID] </name></var>
+<var><name> [SID(mEq/L)] </name></var>
+
+</variables>
+
+<definitions>
+<block><name> CalcSID </name>
+
+<def>
+  <name> [SID] </name>
+  <val>
+      Other.KCell[K+]
+    + Other.CellSIDOtherCations
+    - Other.CellSIDStrongAnions
+    - Brain-Lactate.[Lac-] </val>
+</def>
+
+<def>
+  <name> [SID(mEq/L)] </name>
+  <val> 1000.0 * [SID] </val>
+</def>
+
+</block>
+
+<block><name> CalcPh </name>
+
+<copy>
+  <from> Brain-CO2.PCO2 </from>
+  <to> Other.PhCellspCO2 </to>
+</copy>
+
+<copy>
+  <from> [SID(mEq/L)] </from>
+  <to> Other.PhCellsSID </to>
+</copy>
+
+<copy><from> Other.PhCellspK </from><to> Other.PhGeneralpK </to></copy>
+<copy><from> Other.PhCellspCO2 </from><to> Other.PhGeneralpCO2 </to></copy>
+<copy><from> Other.PhCellsSID </from><to> Other.PhGeneralSID </to></copy>
+
+<testcase>
+
+<case>
+<test> Other.PhGeneralpCO2 LE 0.0 </test>
+<def><name> Other.PhGeneralpH </name><val> Other.PhGeneralpK + 3 </val></def>
+</case>
+
+<case>
+<test> ( Other.PhGeneralSID / Other.PhGeneralpCO2 ) LT 1e-3 </test>
+<def><name> Other.PhGeneralpH </name><val> Other.PhGeneralpK - 3 </val></def>
+</case>
+
+<case>
+<test> TRUE </test>
+<def><name> Other.PhGeneralpH </name><val> Other.PhGeneralpK + LOG10 ( Other.PhGeneralSID / Other.PhGeneralpCO2 ) </val></def>
+</case>
+
+</testcase>
+
+<def><name> Other.PhGeneralH+ </name><val> 10 ^ ( 9.0 - Other.PhGeneralpH ) </val></def>
+
+<copy><from> Other.PhGeneralpH </from><to> Other.PhCellspH </to></copy>
+<copy><from> Other.PhGeneralH+ </from><to> Other.PhCellsH+ </to></copy>
+
+<copy>
+  <from> Other.PhCellspH </from>
+  <to> Ph </to>
+</copy>
+
+</block>
+</definitions>
+</structure>
+
+End

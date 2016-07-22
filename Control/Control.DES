@@ -1,0 +1,30 @@
+	<control>
+		<gofor>
+			<solutionint> 0.1 </solutionint>
+			<displayint> 0.01 </displayint>
+		</gofor>
+				<gofor>
+			<solutionint> 0.2 </solutionint>
+			<displayint> 0.01 </displayint>
+		</gofor>
+		<gofor>
+			<solutionint> 1 </solutionint>
+			<displayint> 0.05 </displayint>
+		</gofor>
+		<gofor>
+			<solutionint> 2 </solutionint>
+			<displayint> 0.05 </displayint>
+		</gofor>
+		<gofor>
+			<solutionint> 4 </solutionint>
+			<displayint> 0.1 </displayint>
+		</gofor>
+		<gofor>
+			<solutionint> 8 </solutionint>
+			<displayint> 0.1 </displayint>
+		</gofor>
+		<gofor>
+			<solutionint> 16 </solutionint>
+			<displayint> 0.1 </displayint>
+		</gofor>
+	</control>

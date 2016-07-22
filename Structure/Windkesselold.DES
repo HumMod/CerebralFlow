@@ -1,0 +1,143 @@
+
+<structure>
+<name> Windkessel </name>
+
+<variables>
+
+<parm><name> HR         </name><val> 72   </val></parm>
+<parm><name> Comp       </name><val> 1.4  </val></parm>
+<parm><name> V0         </name><val> 800  </val></parm>
+<parm><name> SystolicK  </name><val> 0.24 </val></parm>
+<parm><name> DiastolicK </name><val> 0.01 </val></parm>
+<parm><name> FordCond   </name><val> 70   </val></parm>
+<parm><name> BackCond   </name><val> 0    </val></parm>
+<parm><name> VenPres    </name><val> 7    </val></parm>
+<parm><name> PeriCond   </name><val> 0.97 </val></parm>
+
+<var><name> SBP </name><val> UNDEFINED </val></var>
+<var><name> DBP </name><val> UNDEFINED </val></var>
+
+<var><name> VPIso          </name></var>
+<var><name> AP             </name></var>
+<var><name> DelP           </name></var>
+<var><name> VelK           </name></var>
+<var><name> ValveCond      </name></var>
+<var><name> InFlow         </name></var>
+<var><name> OutFlow        </name></var>
+<var><name> PulsePressure </name></var>
+
+</variables>
+
+<equations>
+
+<diffeq>
+  <name> Vol </name>
+  <integralname> Vol </integralname>
+  <initialval> 925.0 </initialval>
+  <dervname> dV/dt </dervname>
+  <errorlim> 10.0 </errorlim>
+</diffeq>
+
+<impliciteq>
+  <name> VP </name>
+  <startname> VP </startname>
+  <initialval> 0.0 </initialval>
+  <endname> VPEnd </endname>
+  <errorlim> 1.0 </errorlim>
+</impliciteq>
+
+</equations>
+
+<definitions> =======================================================
+
+<block><name> Dervs </name> =========================================
+
+<def>
+  <name> AP </name>
+  <val> ( 1 / Comp ) * ( Vol - V0 ) </val>
+</def>
+
+<def>
+  <name> VPIso </name>
+  <val> 200 * SIN ( 2 * System.Pi * ( HR / 60 ) * System.X ) MAX 0 </val>
+</def>
+
+<implicitmath><name> VP </name>
+
+<def>
+  <name> DelP </name>
+  <val> VP - AP </val>
+</def>
+
+<conditional>
+  <name> VelK </name>
+  <test> DelP GT 0 </test>
+  <true> SystolicK </true>
+  <false> DiastolicK </false>
+</conditional>
+
+<conditional>
+  <name> ValveCond </name>
+  <test> DelP GT 0 </test>
+  <true> FordCond </true>
+  <false> BackCond </false>
+</conditional>
+
+<def>
+  <name> InFlow </name>
+  <val> DelP * ValveCond </val>
+</def>
+
+<def>
+  <name> VPEnd </name>
+  <val> VPIso - ( VelK * InFlow ) </val>
+</def>
+
+</implicitmath>
+
+<def>
+  <name> OutFlow </name>
+  <val> ( AP - VenPres ) * PeriCond </val>
+</def>
+
+<def>
+  <name> dV/dt </name>
+  <val> InFlow - OutFlow </val>
+</def>
+
+Track max and min AP for ABP and DBP.
+
+<if><test> System.X EQ 0 </test>
+<true>
+  <def><name> SBP </name><val> AP </val></def>
+  <def><name> DBP </name><val> AP </val></def>
+</true>
+
+<false>
+
+  <andif><test> AP GT SBP </test>
+  <true>
+    <def><name> SBP </name><val> AP </val></def>
+  </true>
+  </andif>
+
+  <andif><test> AP LT DBP </test>
+  <true>
+    <def><name> DBP </name><val> AP </val></def>
+  </true>
+  </andif>
+
+</false>
+</if>
+
+Pulse pressure for display.
+
+<def><name> PulsePressure </name><val> SBP - DBP </val></def>
+
+</block>
+
+</definitions>
+</structure>
+
+
+End

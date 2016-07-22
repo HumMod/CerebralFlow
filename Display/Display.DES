@@ -1,0 +1,21 @@
+
+<?path Display\ ?>
+
+<display>
+
+<common>
+
+<addarrowsnewline/>
+
+<?include Tree\Tree.DES ?>
+<?include Common.DES ?>
+
+</common>
+
+<?include Cerebral.DES ?>
+<?include Windkessel.DES ?>
+<?include Brainold.DES ?>
+<?include Brain\Brain.DES ?>
+<?include Debug.DES ?>
+		
+</display>

@@ -1,0 +1,138 @@
+<structure><name> Brain-Oxygen </name>
+<variables>
+	<var><name> zero </name><val> 0 </val></var>
+	<var><name> PHIin </name></var>
+	<var><name> PHIout </name></var>
+	<var><name> Cap[O2] </name></var>
+	<var><name> O2Delivery </name></var>
+	<var><name> CappO2 </name></var>
+	<var><name> pH </name></var>
+	<var><name> pCO2 </name></var>
+	<var><name> P50 </name></var>
+	<var><name> ScaleForSat </name></var>
+	<var><name> pHEffect </name></var>
+	<var><name> pCO2Effect </name></var>
+	<var><name> TempEffect </name></var>
+	<var><name> COEffect </name></var>
+	<var><name> Delta </name></var>
+	<var><name> Vein[O2] </name></var>
+	<parm><name> O2Diss </name><val> 0.221 </val></parm>
+
+	<var><name> BrainExtracellularpO2 </name><val> 59 </val></var>
+	<var><name> BrainExtracellular[O2] </name></var>
+
+	<var><name> BrainTissuepO2 </name><val> 24 </val></var>
+	<var><name> BrainTissue[O2] </name></var> 
+
+	<var><name> NormalBrainO2Use </name><val> 52.5906 </val></var>
+	<var><name> UseO2 </name></var>
+
+	<var><name> O2ArtyspO2 </name></var>
+
+	<var><name> O2DeliveryConstantArtys_To_Extra </name></var>
+	<var><name> O2DeliveryConstantExtra_To_Tissue </name></var>
+	<var><name> DeliveryO2Artys_To_Extra </name></var>
+	<var><name> DeliveryO2Extra_To_Tissue </name></var>
+
+	<var><name> BrainpO2 </name><val> 24 </val></var>
+
+	<var><name> InitialBrainLiquidMass </name><val> 1035.63 </val></var>
+
+</variables>
+<equations>
+	<diffeq>
+		<name> CapillaryBloodO2Content </name>
+		<integralname> CapillaryBloodO2Content </integralname>
+		<initialval> 2.58 </initialval>
+		<dervname> dCapillaryBloodO2Content/dt </dervname>
+		<errorlim> 0.01 </errorlim>
+	</diffeq>
+	<diffeq>
+		<name> BrainExtracellularO2 </name>
+		<integralname> BrainExtracellularO2 </integralname>
+		<dervname> dBrainExtracellularO2/dt </dervname>
+		<errorlim> 0.01 </errorlim>
+	</diffeq>
+	<diffeq>
+		<name> BrainTissueO2 </name>
+		<integralname> BrainTissueO2 </integralname>
+		<dervname> dBrainTissueO2/dt </dervname>
+		<errorlim> 0.01 </errorlim>
+	</diffeq>
+</equations>
+<definitions>
+	<block><name> Init </name>
+		<def><name> BrainExtracellular[O2] </name><val> BrainExtracellularpO2 * 0.00003 </val></def>
+		<def><name> BrainExtracellularO2 </name><val> BrainExtracellular[O2] * InitialBrainLiquidMass * 0.45 </val></def>
+
+		<def><name> BrainTissue[O2] </name><val> BrainTissuepO2 * 0.00003 </val></def>
+		<def><name> BrainTissueO2 </name><val> BrainTissue[O2] * InitialBrainLiquidMass * 0.55 </val></def>
+
+		<def><name> UseO2 </name><val> NormalBrainO2Use </val></def>
+		
+		<copy><from> Other.HeatCoreTemp(C) </from><to> HgbProps.Temp </to></copy>
+		<copy><from> Other.BloodPhValuesVeinsPh </from><to> HgbProps.pH </to></copy>
+		<copy><from> Other.CO2VeinsPressure </from><to> HgbProps.pCO2 </to></copy>
+		<call> HgbProps.Setup </call>
+		<copy><from> HgbProps.P50 </from><to> P50 </to></copy>
+		<copy><from> HgbProps.ScaleForSat </from><to> ScaleForSat </to></copy>
+		<copy><from> HgbProps.pHEffect </from><to> pHEffect </to></copy>
+		<copy><from> HgbProps.pCO2Effect </from><to> pCO2Effect </to></copy>
+		<copy><from> HgbProps.TempEffect </from><to> TempEffect </to></copy>
+		<copy><from> HgbProps.COEffect </from><to> COEffect </to></copy>
+
+		<copy><from> Other.O2Artys[O2] </from><to> HgbProps.[O2] </to></copy>
+		<copy><from> P50 </from><to> HgbProps.P50 </to></copy>
+		<copy><from> ScaleForSat </from><to> HgbProps.ScaleForSat </to></copy>
+		<call> HgbProps.O2ToPO2 </call>
+		<copy><from> HgbProps.pO2 </from><to> O2ArtyspO2 </to></copy>
+
+		<def><name> O2DeliveryConstantArtys_To_Extra </name><val> UseO2 / ( O2ArtyspO2 - BrainExtracellularpO2 ) </val></def>
+		<def><name> O2DeliveryConstantExtra_To_Tissue </name><val> UseO2 / ( BrainExtracellularpO2 - BrainTissuepO2 ) </val></def>
+	</block>
+	<block><name> Parms </name>
+		<copy><from> Other.HeatCoreTemp(C) </from><to> HgbProps.Temp </to></copy>
+		<copy><from> Other.BloodPhValuesVeinsPh </from><to> HgbProps.pH </to></copy>
+		<copy><from> Other.CO2VeinsPressure </from><to> HgbProps.pCO2 </to></copy>
+		<call> HgbProps.Setup </call>
+		<copy><from> HgbProps.P50 </from><to> P50 </to></copy>
+		<copy><from> HgbProps.ScaleForSat </from><to> ScaleForSat </to></copy>
+		<copy><from> HgbProps.pHEffect </from><to> pHEffect </to></copy>
+		<copy><from> HgbProps.pCO2Effect </from><to> pCO2Effect </to></copy>
+		<copy><from> HgbProps.TempEffect </from><to> TempEffect </to></copy>
+		<copy><from> HgbProps.COEffect </from><to> COEffect </to></copy>
+
+
+		<copy><from> Other.O2Artys[O2] </from><to> HgbProps.[O2] </to></copy>
+		<copy><from> P50 </from><to> HgbProps.P50 </to></copy>
+		<copy><from> ScaleForSat </from><to> HgbProps.ScaleForSat </to></copy>
+		<call> HgbProps.O2ToPO2 </call>
+		<copy><from> HgbProps.pO2 </from><to> O2ArtyspO2 </to></copy>
+	</block>
+	<block><name> Dervs </name>
+		<def><name> UseO2 </name><val> Brain-Fuel.O2Use </val></def>
+		<def><name> Cap[O2] </name><val> CapillaryBloodO2Content / 15 </val></def>
+
+		<def><name> Delta </name><val> Other.O2Artys[O2] - Cap[O2] </val></def>
+		<def><name> Vein[O2] </name><val> Cap[O2] - Delta </val></def>
+
+		<def><name> PHIin </name><val> ( CerebralC.vcvrl - CerebralC.PCVRL ) * CerebralC.gcvrl2 * Other.O2Artys[O2] </val></def>
+		<def><name> PHIout </name><val> ( CerebralC.vcvrl - CerebralC.PCVRL ) * CerebralC.gcvrl2 * Vein[O2] </val></def>
+		<def><name> dCapillaryBloodO2Content/dt </name><val> ( PHIin - PHIout - ( UseO2 / 2 ) ) </val></def>
+
+		<def><name> DeliveryO2Artys_To_Extra </name><val> O2DeliveryConstantArtys_To_Extra * ( O2ArtyspO2 - BrainExtracellularpO2 ) </val></def>
+
+		<def><name> dBrainExtracellularO2/dt </name><val> DeliveryO2Artys_To_Extra - Brain-Fuel.O2Use </val></def>
+		<def><name> BrainExtracellular[O2] </name><val> BrainExtracellularO2 / ( Brain-Size.LiquidMass * 0.45 ) </val></def>
+		<def><name> BrainExtracellularpO2 </name><val> BrainExtracellular[O2] / 0.00003 </val></def>
+
+		<def><name> DeliveryO2Extra_To_Tissue </name><val> O2DeliveryConstantExtra_To_Tissue * ( BrainExtracellularpO2 - BrainTissuepO2 ) </val></def>	
+
+		<def><name> dBrainTissueO2/dt </name><val> DeliveryO2Extra_To_Tissue - Brain-Fuel.O2Use </val></def>
+		<def><name> BrainTissue[O2] </name><val> BrainTissueO2 / ( Brain-Size.LiquidMass * 0.55 ) </val></def>
+		<def><name> BrainTissuepO2 </name><val> BrainTissue[O2] / 0.00003 </val></def>
+
+		<def><name> BrainpO2 </name><val> BrainTissuepO2 </val></def>
+	</block>
+</definitions>
+</structure>

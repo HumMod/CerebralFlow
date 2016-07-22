@@ -1,0 +1,117 @@
+<structure><name> Other </name>
+
+<variables>
+<var><name> TissueH2OInitialVol </name><val> 38361.9 </val></var>
+<var><name> InterstitialWaterInitialVol </name><val> 11165.4 </val></var>
+<var><name> CellH2OInitialVol </name><val> 27196.5 </val></var>
+
+<var><name> TissueH2OVol </name><val> 38361.9 </val></var>
+<var><name> InterstitialWaterVol </name><val> 11165.4 </val></var>
+<var><name> CellH2OVol </name><val> 27196.5 </val></var>
+
+<var><name> PO2ArtysPressure </name><val> 89.8955 </val></var>
+<var><name> AnesthesiaVascularConductance </name><val> 1 </val></var>
+<var><name> ViscosityConductanceEffect </name><val> 1.04546 </val></var>
+<parm><name> O2Artys[O2] </name><val> 0.185553 </val></parm>
+<var><name> HgbTissue[O2] </name><val> 0.142578 </val></var>
+<var><name> HgbTissueP50 </name><val> 27.0183 </val></var>
+<var><name> HgbTissueScaleForSat </name><val> 1.03241 </val></var>
+<var><name> HgbTissuepO2 </name><val> 41.2684 </val></var>
+
+<var><name> HgbConc[O2Max] </name><val> 0.190232 </val></var>
+
+<var><name> BloodVolPVCrit </name><val> 0.582531 </val></var>
+
+<var><name> GlucosePool[Glucose] </name><val> 0.99479 </val></var>
+<var><name> KAPool[KA] </name><val> 0.0088 </val></var>
+<var><name> LacPool[Lac-] </name><val> 0.0012 </val></var>
+
+<var><name> Metabolism-ToolsCarbo(Cal/mG) </name><val> 4.1 </val></var>
+<var><name> Metabolism-ToolsFat(Cal/mG) </name><val> 9.3 </val></var>
+<var><name> Metabolism-ToolsLac(Cal/mG) </name><val> 3.94 </val></var>
+<var><name> Metabolism-ToolsFat(mG/Cal) </name><val> 0.1075 </val></var>
+<var><name> Metabolism-ToolsCarboAerobic(mG/Cal) </name><val> 0.2439 </val></var>
+<var><name> Metabolism-ToolsCarboAnaerobic(mG/Cal) </name><val> 6.3411 </val></var>
+<var><name> Metabolism-ToolsLac-(mG/Cal) </name><val> 0.2538 </val></var>
+
+<var><name> KCell[K+] </name><val> 0.138667 </val></var>
+<var><name> CellSIDOtherCations </name><val> 0.012 </val></var>
+<var><name> CellSIDStrongAnions </name><val> 0.117 </val></var>
+<var><name> CellSIDWeakAnions </name><val> 0.036 </val></var>
+
+<var><name> PhCellspK </name><val> 7.15 </val></var>
+<var><name> PhCellspCO2 </name><val> 42.538 </val></var>
+<var><name> PhCellsSID </name><val> 32.4894 </val></var>
+<var><name> PhCellspH </name><val> 7.03296 </val></var>
+<var><name> PhCellsH+ </name><val> 92.6906 </val></var>
+
+<var><name> PhGeneralpK </name><val> 7.42 </val></var>
+<var><name> PhGeneralpCO2 </name><val> 38.3871 </val></var>
+<var><name> PhGeneralSID </name><val> 37.7562 </val></var>
+<var><name> PhGeneralpH </name><val> 7.4128 </val></var>
+<var><name> PhGeneralH+ </name><val> 38.6542 </val></var>
+
+<var><name> RegionalPressureBrain </name><val> 94.2035 </val></var>
+<var><name> SystemicVeinsPressure </name><val> 8.39916 </val></var>
+
+<var><name> HeatCoreTemp(C) </name><val> 36.8371 </val></var>
+
+<var><name> Metabolism-RespiratoryQuotientRQ </name><val> 0.8 </val></var>
+<var><name> CO2ToolsLitersToMols </name><val> 0.0446 </val></var>
+<var><name> BloodIons[SID] </name><val> 0.037 </val></var>
+
+<parm><name> CO2BloodpCO2 </name><val> 42.538 </val></parm>
+<var><name> CO2Blood[SID] </name><val> 0.037 </val></var>
+<var><name> CO2Blood[HCO3] </name><val> 0.023 </val></var>
+<var><name> CO2Bloodp50 </name><val> 32 </val></var>
+<var><name> CO2BloodK </name><val> 0.04 </val></var>
+<var><name> CO2Bloodk </name><val> 1.09 </val></var>
+
+<parm><name> CO2ArtyspCO2 </name><val> 42.538 </val></parm>
+<var><name> CO2Artys[SID] </name><val> 0.037 </val></var>
+<var><name> CO2Artys[HCO3] </name><val> 0.023 </val></var>
+<var><name> CO2Artysp50 </name><val> 32 </val></var>
+<var><name> CO2ArtysK </name><val> 0.04 </val></var>
+<var><name> CO2Artysk </name><val> 1.09 </val></var>
+
+<var><name> ThyroidEffect </name><val> 1.02151 </val></var>
+<var><name> HeatMetabolismCore </name><val> 0.980575 </val></var>
+<var><name> Metabolism-ToolsCalToO2 </name><val> 0.2093 </val></var>
+<var><name> Metabolism-ToolsO2ToCal </name><val> 4.778 </val></var>
+
+<var><name> OsmBodyCellWall(mOsm/L) </name><val> 273.135 </val></var>
+
+<var><name> AnesthesiaBrainFunction </name><val> 1 </val></var>
+
+<var><name> BloodPhValuesVeinsPh </name><val> 7.381 </val></var>
+<var><name> CO2VeinsPressure </name><val> 43.2895 </val></var>
+<var><name> HgbConcCarboxyPercent </name><val> 0.388732 </val></var>
+
+<var><name> ICAFlow </name></var>
+<var><name> MCAFlow </name></var>
+<var><name> CVRFlow </name></var>
+<var><name> BVFlow </name></var>
+<var><name> EVOFlow </name></var>
+</variables>
+
+<definitions>
+	<block><name> Parms </name>
+<def><name> .CO2ArtysK </name><val> CO2Artysk * CO2Blood[SID] </val></def>
+
+<copy><from> CO2Artysp50 </from><to> CO2_pCO2_To_[HCO3].p50 </to></copy>
+<copy><from> CO2ArtysK </from><to> CO2_pCO2_To_[HCO3].K </to></copy>
+<copy><from> CO2ArtyspCO2 </from><to> CO2_pCO2_To_[HCO3].pCO2 </to></copy>
+<call> CO2_pCO2_To_[HCO3].Calc </call>
+<copy><from> CO2_pCO2_To_[HCO3].[HCO3] </from><to> CO2Artys[HCO3] </to></copy>
+
+	</block>
+
+
+	<block><name> Dervs </name>
+		<def><name> ICAFlow </name><val> CerebralC.qical + CerebralC.qicar </val></def>
+		<def><name> MCAFlow </name><val> CerebralC.qmcal + CerebralC.qmcar </val></def>
+		<def><name> CVRFlow </name><val> CerebralC.qcvrl + CerebralC.qcvrr </val></def>
+		<def><name> BVFlow </name><val> CerebralC.qbvl + CerebralC.qbvr </val></def>
+	</block>
+</definitions>
+</structure>

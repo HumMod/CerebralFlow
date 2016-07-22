@@ -1,0 +1,688 @@
+<panel>
+			<name> Cerebral Model C </name>
+			<structurename> CerebralC </structurename>
+
+			<showpanelname>
+				<row> 0.5 </row> <col> 1.0 </col>
+			</showpanelname>
+
+			<showvalue>
+				<row> 2 </row> <col> 1.0 </col>
+				<name> vical </name>
+				<format><decimal> 1 </decimal></format>
+				<label> Pressure in Left ICA [vical] </label>
+			</showvalue>
+
+			<showvalue>
+				<row> 3.5 </row> <col> 1.0 </col>
+				<name> PICAL </name>
+				<format><decimal> 1 </decimal></format>
+				<label> Pressure Downstream Left ICA [PICAL] </label>
+			</showvalue>
+
+      <showvalue>
+        <row> 5 </row> <col> 1.0 </col>
+        <name> vmcal </name>
+        <format><decimal> 1 </decimal></format>
+        <label> Pressure in Left MCA [vmcal] </label>
+      </showvalue>
+
+      <showvalue>
+        <row> 6.5 </row> <col> 1.0 </col>
+        <name> PMCAL </name>
+        <format><decimal> 1 </decimal></format>
+        <label> Pressure Downstream in Left MCA [PMCAL] </label>
+      </showvalue>
+
+      <showvalue>
+        <row> 8 </row> <col> 1.0 </col>
+        <name> vcvrl </name>
+        <format><decimal> 1 </decimal></format>
+        <label> Pressure of Left Vascular Regulating Bed [vcvrl] </label>
+      </showvalue>
+
+      <showvalue>
+        <row> 9.5 </row><col> 1 </col>
+        <name> PCVRL </name>
+        <format><decimal> 1 </decimal></format>
+        <label> Pressure Downstream of Left Vascular Regulating Bed [PCVRL] </label>
+      </showvalue>
+
+      <showvalue>
+        <row> 11 </row><col> 1 </col>
+        <name> vbvl </name>
+        <format><decimal> 1 </decimal></format>
+        <label> Pressure of Left Intracranial Venous Outflow [vbvl] </label>
+      </showvalue>
+
+      <showvalue>
+        <row> 12.5 </row><col> 1 </col>
+        <name> vo </name>
+        <format><decimal> 1 </decimal></format>
+        <label> Pressure of Extracranial Venous Outflow (Sagittal Sinus Pressure) [vo] </label>
+      </showvalue>
+
+
+
+      <showvalue>
+        <row> 17 </row> <col> 1.0 </col>
+        <name> vicar </name>
+        <format><decimal> 1 </decimal></format>
+        <label> Pressure in Right ICA [vicar] </label>
+      </showvalue>
+
+      <showvalue>
+        <row> 18.5 </row> <col> 1.0 </col>
+        <name> PICAR </name>
+        <format><decimal> 1 </decimal></format>
+        <label> Pressure Downstream Right ICA [PICAR] </label>
+      </showvalue>
+
+      <showvalue>
+        <row> 20 </row> <col> 1.0 </col>
+        <name> vmcar </name>
+        <format><decimal> 1 </decimal></format>
+        <label> Pressure in Right MCA [vmcar] </label>
+      </showvalue>
+
+      <showvalue>
+        <row> 21.5 </row> <col> 1.0 </col>
+        <name> PMCAR </name>
+        <format><decimal> 1 </decimal></format>
+        <label> Pressure Downstrem in Right MCA [PMCAR] </label>
+      </showvalue>
+
+      <showvalue>
+        <row> 23 </row> <col> 1.0 </col>
+        <name> vcvrr </name>
+        <format><decimal> 1 </decimal></format>
+        <label> Pressure of Right Vascular Regulating Bed [vcvrr] </label>
+      </showvalue>
+
+      <showvalue>
+        <row> 24.5 </row><col> 1 </col>
+        <name> PCVRR </name>
+        <format><decimal> 1 </decimal></format>
+        <label> Pressure Downstream of Right Vascular Regulating Bed [PCVRR] </label>
+      </showvalue>
+
+      <showvalue>
+        <row> 26 </row><col> 1 </col>
+        <name> vbvr </name>
+        <format><decimal> 1 </decimal></format>
+        <label> Pressure of Right Intracranial Venous Outflow [vbvr] </label>
+      </showvalue>
+
+      <showvalue>
+        <row> 27.5 </row><col> 1 </col>
+        <name> vo </name>
+        <format><decimal> 1 </decimal></format>
+        <label> Pressure of Extracranial Venous Outflow (Sagittal Sinus Pressure) [vo] </label>
+      </showvalue>
+
+
+      <showvalue>
+        <row> 32 </row><col> 1 </col>
+        <name> PIV </name>
+        <format><decimal> 1 </decimal></format>
+        <label> Pressure in Cranial Ventricles [PIV] </label>
+      </showvalue>
+
+      <showvalue>
+        <row> 33.5 </row><col> 1 </col>
+        <name> vic </name>
+        <format><decimal> 1 </decimal></format>
+        <label> Pressure in Cranial Cisterns [vic] </label>
+      </showvalue>
+
+      <showvalue>
+        <row> 35 </row><col> 1 </col>
+        <name> PIL </name>
+        <format><decimal> 1 </decimal></format>
+        <label> Pressure in Left Subarachnoid Space [PIL] </label>
+      </showvalue>
+
+      <showvalue>
+        <row> 36.5 </row><col> 1 </col>
+        <name> PIR </name>
+        <format><decimal> 1 </decimal></format>
+        <label> Pressure in Right Subarachnoid Space [PIR] </label>
+      </showvalue>
+
+
+      <showvalue>
+        <row> 40 </row><col> 1 </col>
+        <name> vvmcal </name>
+        <format><decimal> 1 </decimal></format>
+        <label> Left MCA Transmural [vvmcal] </label>
+      </showvalue>
+
+      <showvalue>
+        <row> 41.5 </row><col> 1 </col>
+        <name> vvcvrl </name>
+        <format><decimal> 1 </decimal></format>
+        <label> Left CVR Transmural [vvcvrl] </label>
+      </showvalue>
+
+      <showvalue>
+        <row> 43 </row><col> 1 </col>
+        <name> vvbvl </name>
+        <format><decimal> 1 </decimal></format>
+        <label> Left IVO Transmural [vvbvl] </label>
+      </showvalue>
+
+
+      <showvalue>
+        <row> 46 </row><col> 1 </col>
+        <name> vvmcar </name>
+        <format><decimal> 1 </decimal></format>
+        <label> Right MCA Transmural [vvmcar] </label>
+      </showvalue>
+
+      <showvalue>
+        <row> 47.5 </row><col> 1 </col>
+        <name> vvcvrr </name>
+        <format><decimal> 1 </decimal></format>
+        <label> Right CVR Transmural [vvcvrr] </label>
+      </showvalue>
+
+      <showvalue>
+        <row> 49 </row><col> 1 </col>
+        <name> vvbvr </name>
+        <format><decimal> 1 </decimal></format>
+        <label> Right IVO Transmural [vvbvr] </label>
+      </showvalue>
+
+
+
+<showgraph>
+  <row> 2.0 </row><col> 75.0 </col>
+  <high> 12 </high><wide> 40 </wide><leftmargin> 15 </leftmargin>
+  <xaxis>
+     <name> System.X </name>
+     <label> Time </label>
+     <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> ABP </name>
+      <label> ABP </label>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <yvar>
+      <name> PICAL </name>
+      <label> PICAL </label>
+      <linecolor> RED </linecolor>
+    </yvar>
+    <yvar>
+      <name> vical </name>
+      <label> vical </label>
+       <linetype> DOT </linetype>
+      <linecolor> RED </linecolor>
+    </yvar>
+    <yvar>
+      <name> PMCAL </name>
+      <label> PMCAL </label>
+      <linecolor> BLACK </linecolor>
+    </yvar>
+    <yvar>
+      <name> vmcal </name>
+      <label> vmcal </label>
+       <linetype> DOT </linetype>
+      <linecolor> BLACK </linecolor>
+    </yvar>
+    <yvar>
+      <name> PCVRL </name>
+      <label> PCVRL </label>
+      <linecolor> GREEN </linecolor>
+    </yvar>
+    <yvar>
+      <name> vcvrl </name>
+      <label> vcvrl </label>
+       <linetype> DOT </linetype>
+      <linecolor> GREEN </linecolor>
+    </yvar>
+    <yvar>
+      <name> vbvl </name>
+      <label> vbvl </label>
+       <linetype> DOT </linetype>
+      <linecolor> MAGENTA </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 100 </max><inc> 10 </inc></scale>
+  </yaxis>
+</showgraph>
+
+<showgraph>
+  <row> 16 </row><col> 75.0 </col>
+  <high> 12 </high><wide> 40 </wide><leftmargin> 15 </leftmargin>
+  <xaxis>
+     <name> System.X </name>
+     <label> Time </label>
+     <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> PIV </name>
+      <label> ICPventricles </label>
+      <linecolor> RED </linecolor>
+    </yvar>
+    <yvar>
+      <name> zero </name>
+      <label></label>
+      <linetype> DOT </linetype>
+      <linecolor> BLACK </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 10 </max><inc> 10 </inc></scale>
+  </yaxis>
+</showgraph>
+
+<showgraph>
+  <row> 30 </row><col> 75.0 </col>
+  <high> 12 </high><wide> 40 </wide><leftmargin> 15 </leftmargin>
+  <xaxis>
+     <name> System.X </name>
+     <label> Time </label>
+     <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> vic </name>
+      <label> ICPcisterns </label>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <yvar>
+      <name> zero </name>
+      <label></label>
+      <linetype> DOT </linetype>
+      <linecolor> BLACK </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 10 </max><inc> 10 </inc></scale>
+  </yaxis>
+</showgraph>
+
+<showgraph>
+  <row> 44 </row><col> 75.0 </col>
+  <high> 12 </high><wide> 40 </wide><leftmargin> 15 </leftmargin>
+  <xaxis>
+     <name> System.X </name>
+     <label> Time </label>
+     <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> PIL </name>
+      <label> ICPsubarachL </label>
+      <linecolor> GREEN </linecolor>
+    </yvar>
+    <yvar>
+      <name> zero </name>
+      <label></label>
+      <linetype> DOT </linetype>
+      <linecolor> BLACK </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 10 </max><inc> 10 </inc></scale>
+  </yaxis>
+</showgraph>
+
+<!--<showgraph>
+  <row> 2.0 </row><col> 125 </col>
+  <high> 12 </high><wide> 40 </wide><leftmargin> 15 </leftmargin>
+  <xaxis>
+     <name> System.X </name>
+     <label> Time </label>
+     <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> zero </name>
+      <label> zero </label>
+      <linetype> DASH </linetype>
+    </yvar>
+    <yvar>
+      <name> vic </name>
+      <label> vic </label>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <yvar>
+      <name> dvic/dt </name>
+      <label> dvic/dt </label>
+      <linecolor> RED </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 20 </max><inc> 1 </inc></scale>
+  </yaxis>
+</showgraph>-->
+
+<!--<showgraph>
+  <row> 2.0 </row><col> 125 </col>
+  <high> 12 </high><wide> 40 </wide><leftmargin> 15 </leftmargin>
+  <xaxis>
+     <name> System.X </name>
+     <label> Time </label>
+     <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> zero </name>
+      <label> zero </label>
+      <linetype> DASH </linetype>
+    </yvar>
+    <yvar>
+      <name> dumcal/dt </name>
+      <label> dumcal/dt </label>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <yvar>
+      <name> ducvrl/dt </name>
+      <label> ducvrl/dt </label>
+      <linecolor> RED </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 20 </max><inc> 1 </inc></scale>
+  </yaxis>
+</showgraph>-->
+
+<showgraph>
+  <row> 2.0 </row><col> 125 </col>
+  <high> 12 </high><wide> 40 </wide><leftmargin> 15 </leftmargin>
+  <xaxis>
+     <name> System.X </name>
+     <label> Time </label>
+     <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> gical2 </name>
+      <label> gical2 </label>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <yvar>
+      <name> gmcal2 </name>
+      <label> gmcal2 </label>
+      <linecolor> RED </linecolor>
+    </yvar>
+    <yvar>
+      <name> gcvrl2 </name>
+      <label> gcvrl2 </label>
+      <linecolor> MAGENTA </linecolor>
+    </yvar>
+    <yvar>
+      <name> gbvl2 </name>
+      <label> gbvl2 </label>
+      <linecolor> CYAN </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 20 </max><inc> 1 </inc></scale>
+  </yaxis>
+</showgraph>
+
+<showgraph>
+  <row> 16 </row><col> 125 </col>
+  <high> 26 </high><wide> 40 </wide><leftmargin> 15 </leftmargin>
+  <xaxis>
+     <name> System.X </name>
+     <label> Time </label>
+     <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> fourfifteen </name>
+      <label></label>
+      <linetype> DASH </linetype>
+    </yvar>
+    <yvar>
+      <name> qical </name>
+      <label> qical </label>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <yvar>
+      <name> qmcal </name>
+      <label> qmcal </label>
+      <linecolor> RED </linecolor>
+    </yvar>
+    <yvar>
+      <name> qcvrl </name>
+      <label> qcvrl </label>
+      <linecolor> GRAY </linecolor>
+    </yvar>
+    <yvar>
+      <name> qbvl </name>
+      <label> qbvl </label>
+      <linecolor> MAGENTA </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 20 </max><inc> 1 </inc></scale>
+  </yaxis>
+</showgraph>
+
+<!--<showgraph>
+  <row> 44 </row><col> 125 </col>
+  <high> 12 </high><wide> 40 </wide><leftmargin> 15 </leftmargin>
+  <xaxis>
+     <name> System.X </name>
+     <label> Time </label>
+     <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+    <yvar>
+      <name> zero </name>
+      <label> zero </label>
+      <linetype> DASH </linetype>
+    </yvar>
+    <yvar>
+      <name> uumcal </name>
+      <label> uumcal </label>
+      <linecolor> RED </linecolor>
+    </yvar>
+    <yvar>
+      <name> uucvrl </name>
+      <label> uucvrr </label>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <yvar>
+      <name> uubvl </name>
+      <label> uubvl </label>
+      <linecolor> MAGENTA </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 20 </max><inc> 1 </inc></scale>
+  </yaxis>
+</showgraph>-->
+
+<showgraph>
+  <row> 44 </row><col> 125 </col>
+  <high> 12 </high><wide> 40 </wide><leftmargin> 15 </leftmargin>
+  <xaxis>
+     <name> System.X </name>
+     <label> Time </label>
+     <scale><min> 0 </min><max> 2 </max></scale>
+  </xaxis>
+  <yaxis>
+      <yvar>
+      <name> fifteen </name>
+      <label></label>
+      <linetype> DASH </linetype>
+    </yvar>
+      <yvar>
+      <name> fifty </name>
+      <label></label>
+      <linetype> DASH </linetype>
+    </yvar>
+    <yvar>
+      <name> uucvrl </name>
+      <label> uucvrl </label>
+      <linecolor> RED </linecolor>
+    </yvar>
+    <yvar>
+      <name> uumcal </name>
+      <label> uumcal </label>
+      <linecolor> BLUE </linecolor>
+    </yvar>
+    <scale><min> 0 </min><max> 20 </max><inc> 1 </inc></scale>
+  </yaxis>
+</showgraph>
+
+      <!--<showvalue>
+        <row> 2 </row><col> 170 </col>
+        <name> umcal </name>
+        <format><decimal> 1 </decimal></format>
+        <label> Volume in Left MCA [umcal] </label>
+      </showvalue>
+      <showvalue>
+        <row> 3.5 </row><col> 170 </col>
+        <name> umcar </name>
+        <format><decimal> 1 </decimal></format>
+        <label> Volume in Right MCA [umcar] </label>
+      </showvalue>
+      <showvalue>
+        <row> 5 </row><col> 170 </col>
+        <name> ucvrl </name>
+        <format><decimal> 1 </decimal></format>
+        <label> Volume in Left CVRB [ucvrl] </label>
+      </showvalue>
+      <showvalue>
+        <row> 6.5 </row><col> 170 </col>
+        <name> ucvrr </name>
+        <format><decimal> 1 </decimal></format>
+        <label> Volume in Left CVRB [ucvrr] </label>
+      </showvalue>-->
+
+      <repeatlist>
+        <name> CVRreal </name>
+        <firstval> 0 </firstval>
+        <repeat>
+          <reps> 100 </reps>
+          <stepsize> 0.005 </stepsize>
+        </repeat>
+      </repeatlist>
+
+      <slidebar>
+        <row> 2 </row><col> 170 </col>
+        <name> CVRreal </name>
+        <listname> CVRreal </listname>
+        <label> CVRreal </label>
+      </slidebar>
+
+      <showvalue>
+        <row> 3.5 </row><col> 170 </col>
+        <name> CVRreal </name>
+        <format><decimal> 3 </decimal></format>
+        <label> CVRreal </label>
+      </showvalue>
+
+      <showvalue>
+        <row> 5 </row><col> 170 </col>
+        <name> CVR </name>
+        <format><decimal> 3 </decimal></format>
+        <label> CVR </label>
+      </showvalue>
+
+      <showvalue>
+        <row> 6.5 </row><col> 170 </col>
+        <name> qical </name>
+        <format><decimal> 3 </decimal></format>
+        <label> Flow through Left ICA [qical] </label>
+      </showvalue>
+
+      <showvalue>
+        <row> 11 </row><col> 170 </col>
+        <name> qmcal </name>
+        <format><decimal> 1 </decimal></format>
+        <label> Flow through Left MCA [qmcal] </label>
+      </showvalue>
+
+      <showvalue>
+        <row> 12.5 </row><col> 170 </col>
+        <name> uumcal </name>
+        <format><decimal> 1 </decimal></format>
+        <label> Volume in Left MCA [uumcal] </label>
+      </showvalue>
+
+      <showvalue>
+        <row> 15.5 </row><col> 170 </col>
+        <name> qcvrl </name>
+        <format><decimal> 3 </decimal></format>
+        <label> Flow through Left CVRB [qcvrl] </label>
+      </showvalue>
+
+      <showvalue>
+        <row> 17 </row><col> 170 </col>
+        <name> uucvrl </name>
+        <format><decimal> 3 </decimal></format>
+        <label> Volume in Left CVRB [uucvrl] </label>
+      </showvalue>
+
+      <showvalue>
+        <row> 20 </row><col> 170 </col>
+        <name> qbvl </name>
+        <format><decimal> 3 </decimal></format>
+        <label> Flow through Left VO [qbvl] </label>
+      </showvalue>
+
+      <showvalue>
+        <row> 21.5 </row><col> 170 </col>
+        <name> uubvl </name>
+        <format><decimal> 3 </decimal></format>
+        <label> Volume in Left VO [uubvl] </label>
+      </showvalue>      
+
+      <showvalue>
+        <row> 26. </row><col> 170 </col>
+        <name> CPPm </name>
+        <format><decimal> 3 </decimal></format>
+        <label> CPPm </label>
+      </showvalue>      
+
+      <showvalue>
+        <row> 27.5 </row><col> 170 </col>
+        <name> CPPoffset </name>
+        <format><decimal> 3 </decimal></format>
+        <label> CPP offset </label>
+      </showvalue>      
+
+      <showvalue>
+        <row> 29. </row><col> 170 </col>
+        <name> CPP </name>
+        <format><decimal> 3 </decimal></format>
+        <label> CPP </label>
+      </showvalue>  
+
+      <showvalue>
+        <row> 35. </row><col> 170 </col>
+        <name> TensionEffect </name>
+        <format><decimal> 3 </decimal></format>
+        <label> TensionEffect </label>
+      </showvalue>
+
+      <repeatlist>
+        <name> AO2 </name>
+        <firstval> 0.01 </firstval>
+        <repeat>
+          <reps> 100 </reps>
+          <stepsize> 0.005 </stepsize>
+        </repeat>
+      </repeatlist>
+
+      <slidebar>
+        <row> 40 </row><col> 170 </col>
+        <name> Other.O2Artys[O2] </name>
+        <listname> AO2 </listname>
+        <label> Arterial [O2] </label>
+      </slidebar>
+
+    <repeatlist>
+      <name> PCO2 </name>
+      <firstval> 1 </firstval>
+      <repeat><reps> 20 </reps><stepsize> 5 </stepsize></repeat>
+    </repeatlist>
+
+    <slidebar>
+      <row> 42 </row><col> 170 </col>
+      <name> Other.CO2ArtyspCO2 </name>
+      <listname> PCO2 </listname>
+      <label> Arterial PCO2 </label>
+    </slidebar>
+
+    <showvalue>
+      <row> 46 </row><col> 170 </col>
+      <name> CVR_Flow_mL_/_100g_/_min </name>
+      <format><decimal> 3 </decimal></format>
+      <label> CVR Flow mL / 100g / min </label>
+    </showvalue>
+
+</panel>
